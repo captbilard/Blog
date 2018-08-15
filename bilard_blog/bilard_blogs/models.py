@@ -17,7 +17,8 @@ class PostView(models.Model):
 	post_title = models.CharField(max_length = 100)
 	post = models.TextField()
 	image_check = models.BooleanField(default=False)
-	image_post =  models.ImageField(upload_to = 'media/')
+	image_post =  models.ImageField(upload_to = 'media/') 
+	#I still need to address the issue of adding media to a django project.
 	date_posted = models.DateTimeField(default = timezone.now, editable = True)
 
 	def __str__(self):
