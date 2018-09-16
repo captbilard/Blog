@@ -14,6 +14,7 @@ class Author(models.Model):
 		return self.display_name
 
 class PostView(models.Model):
+	#author = models.ForeignKey(Author, on_delete= models.CASCADE)
 	post_title = models.CharField(max_length = 100)
 	post = models.TextField()
 	image_check = models.BooleanField(default=False)
